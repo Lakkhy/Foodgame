@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://jonr4y8c4hyd"]
+
+[ext_resource type="PackedScene" uid="uid://dihn4ucsp6f6t" path="res://player.tscn" id="1_elypj"]
+[ext_resource type="ArrayMesh" uid="uid://dol2r0r5dklhu" path="res://addons/kaykit_prototype_bits/Assets/obj/Floor.obj" id="2_cfvac"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ph7pd"]
+turbidity = 0.0
+sun_disk_scale = 0.0
+ground_color = Color(0.192157, 0.466667, 0.831373, 1)
+energy_multiplier = 12.5
+
+[sub_resource type="Sky" id="Sky_teubm"]
+sky_material = SubResource("PhysicalSkyMaterial_ph7pd")
+
+[sub_resource type="Environment" id="Environment_rw1cu"]
+background_mode = 2
+sky = SubResource("Sky_teubm")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3yrho"]
+size = Vector3(1, 0.0898072, 1)
+
+[node name="level 1" type="Node3D"]
+
+[node name="player" parent="." instance=ExtResource("1_elypj")]
+transform = Transform3D(-0.281186, 0, 0.413442, 0, 0.5, 0, -0.413442, 0, -0.281186, 0, 0.566239, 0.110403)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rw1cu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.453445, -0.718679, 0.527152, 0.369751, 0.689838, 0.622421, -0.81097, -0.0873189, 0.578536, -7.55298, 9.28433, 12.116)
+light_color = Color(1, 1, 0.827451, 1)
+light_energy = 0.555
+shadow_enabled = true
+
+[node name="stonefloor1" type="StaticBody3D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="Floor" type="MeshInstance3D" parent="stonefloor1"]
+transform = Transform3D(1.265, 0, 0, 0, 1.265, 0, 0, 0, 1.265, -0.00818694, -0.607597, 0.0657871)
+mesh = ExtResource("2_cfvac")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stonefloor1"]
+transform = Transform3D(4.9841, 0, 0, 0, 4.9841, 0, 0, 0, 4.9841, -0.00818694, -0.288045, 0.0657871)
+shape = SubResource("BoxShape3D_3yrho")
+
+[node name="stonefloor2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.05202)
+metadata/_edit_group_ = true
+
+[node name="Floor" type="MeshInstance3D" parent="stonefloor2"]
+transform = Transform3D(1.265, 0, 0, 0, 1.265, 0, 0, 0, 1.265, -0.00818694, -0.607597, 0.0657871)
+mesh = ExtResource("2_cfvac")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stonefloor2"]
+transform = Transform3D(4.9841, 0, 0, 0, 4.9841, 0, 0, 0, 4.9841, -0.00818694, -0.288045, 0.0657871)
+shape = SubResource("BoxShape3D_3yrho")
+
+[node name="stonefloor3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.1078)
+metadata/_edit_group_ = true
+
+[node name="Floor" type="MeshInstance3D" parent="stonefloor3"]
+transform = Transform3D(1.265, 0, 0, 0, 1.265, 0, 0, 0, 1.265, -0.00818694, -0.607597, 0.0657871)
+mesh = ExtResource("2_cfvac")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stonefloor3"]
+transform = Transform3D(4.9841, 0, 0, 0, 4.9841, 0, 0, 0, 4.9841, -0.00818694, -0.288045, 0.0657871)
+shape = SubResource("BoxShape3D_3yrho")
