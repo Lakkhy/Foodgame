@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://bu7r8cayrnx1o"]
+
+[ext_resource type="Script" path="res://character.gd" id="1_l4b48"]
+[ext_resource type="PackedScene" uid="uid://d02ehkflwdsxi" path="res://addons/kaykit_restaurant_bits/Assets/gltf/food_burger.gltf" id="2_n5tlk"]
+[ext_resource type="PackedScene" uid="uid://c5au2jlaeliws" path="res://addons/kaykit_restaurant_bits/Assets/gltf/knife.gltf" id="3_yos30"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kt6b6"]
+height = 1.3634
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_c477u"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_l4b48")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.574306, 0)
+shape = SubResource("CapsuleShape3D_kt6b6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.115, 0, 0, 0, 0.115, 0, 0, 0, 0.115, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_c477u")
+
+[node name="knife" parent="MeshInstance3D" instance=ExtResource("3_yos30")]
+transform = Transform3D(2.01874, -8.39488e-15, -8.45808, 6.63459, 5.39343, 1.58352, 5.24608, -6.82094, 1.25211, -4.18051, 3.23711, 0.636557)
+
+[node name="food_burger" parent="MeshInstance3D" instance=ExtResource("2_n5tlk")]
+transform = Transform3D(10.255, 0, 0, 0, 10.255, 0, 0, 0, 10.255, 0, 0, 0)
+
+[node name="Camerabase" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Camerabase"]
+transform = Transform3D(1, 0, 0, 0, 0.996525, 0.0832952, 0, -0.0832952, 0.996525, 0, 1.05224, 2.4752)

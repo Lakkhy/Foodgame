@@ -1,0 +1,117 @@
+[gd_scene load_steps=3 format=3 uid="uid://dob0yj3bxwcc8"]
+
+[ext_resource type="ArrayMesh" uid="uid://sdadu855gisc" path="res://addons/kaykit_restaurant_bits/Assets/obj/floor_kitchen.obj" id="1_8lwc8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7dd3h"]
+size = Vector3(7.81379, 0.586078, 8.1047)
+
+[node name="floor" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.494555, 1.11783)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="FloorKitchen4" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99715, 0, 0.867098)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="FloorKitchen3" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99715, 0, -3.08601)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="FloorKitchen2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00043, 0, -3.08601)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="FloorKitchen" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00043, 0, 0.89965)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0240171, 0.218373, -1.0977)
+shape = SubResource("BoxShape3D_7dd3h")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.00331, 0, 0)
+
+[node name="FloorKitchen4" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99715, 0, 0.867098)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="FloorKitchen3" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99715, 0, -3.08601)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="FloorKitchen2" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00043, 0, -3.08601)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="FloorKitchen" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00043, 0, 0.89965)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0240171, 0.218373, -1.0977)
+shape = SubResource("BoxShape3D_7dd3h")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.98943)
+
+[node name="FloorKitchen4" type="MeshInstance3D" parent="StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99715, 0, 0.867098)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="FloorKitchen3" type="MeshInstance3D" parent="StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99715, 0, -3.08601)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="FloorKitchen2" type="MeshInstance3D" parent="StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00043, 0, -3.08601)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="FloorKitchen" type="MeshInstance3D" parent="StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00043, 0, 0.89965)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0240171, 0.218373, -1.0977)
+shape = SubResource("BoxShape3D_7dd3h")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.00331, 0, 7.98943)
+
+[node name="FloorKitchen4" type="MeshInstance3D" parent="StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99715, 0, 0.867098)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="FloorKitchen3" type="MeshInstance3D" parent="StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99715, 0, -3.08601)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="FloorKitchen2" type="MeshInstance3D" parent="StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00043, 0, -3.08601)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="FloorKitchen" type="MeshInstance3D" parent="StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00043, 0, 0.89965)
+mesh = ExtResource("1_8lwc8")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0240171, 0.218373, -1.0977)
+shape = SubResource("BoxShape3D_7dd3h")

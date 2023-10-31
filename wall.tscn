@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://in7sofwt30gg"]
+
+[ext_resource type="PackedScene" uid="uid://ioe81m46ouey" path="res://addons/kaykit_restaurant_bits/Assets/gltf/wall.gltf" id="1_5d5rq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_irgt0"]
+size = Vector3(15.5705, 4.1705, 0.524012)
+
+[node name="wall" type="Node3D"]
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.86331, 0.511413, 7.85645)
+
+[node name="wall" parent="StaticBody3D" instance=ExtResource("1_5d5rq")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.99048, -0.100484, 0.151432)
+
+[node name="wall" parent="StaticBody3D/StaticBody3D" instance=ExtResource("1_5d5rq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0868945, -0.119936)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97412, -0.100484, 0.151432)
+
+[node name="wall" parent="StaticBody3D/StaticBody3D2" instance=ExtResource("1_5d5rq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0868945, -0.119936)
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.923, -0.100484, 0.151432)
+
+[node name="wall" parent="StaticBody3D/StaticBody3D3" instance=ExtResource("1_5d5rq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0868945, -0.119936)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9993, 1.89592, 0)
+shape = SubResource("BoxShape3D_irgt0")
