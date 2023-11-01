@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://vlt1epixcok2"]
+
+[ext_resource type="ArrayMesh" uid="uid://bywwkn07lvmc0" path="res://addons/kaykit_restaurant_bits/Assets/obj/wall_doorway.obj" id="1_xhey5"]
+[ext_resource type="PackedScene" uid="uid://r8p0qfja6l4w" path="res://addons/kaykit_restaurant_bits/Assets/gltf/door_B.gltf" id="2_32q1q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uutvg"]
+size = Vector3(1.77384, 2.60023, 0.292557)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ilcdl"]
+size = Vector3(1.18644, 4.01978, 0.508307)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="door_B" parent="." instance=ExtResource("2_32q1q")]
+transform = Transform3D(-0.625243, 0, -0.78043, 0, 1, 0, 0.78043, 0, -0.625243, -0.329704, 0, -0.123179)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door_B"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.773577, 1.3203, -0.0418435)
+shape = SubResource("BoxShape3D_uutvg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.494136, 3.39731, -0.33519)
+shape = SubResource("BoxShape3D_ilcdl")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.876364, 1.98614, -0.33519)
+shape = SubResource("BoxShape3D_ilcdl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91137, 1.98614, -0.33519)
+shape = SubResource("BoxShape3D_ilcdl")
+
+[node name="WallDoorway" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50165, 0, -0.33519)
+mesh = ExtResource("1_xhey5")
+skeleton = NodePath("../..")
