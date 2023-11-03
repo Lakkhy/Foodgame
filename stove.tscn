@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://6q8o0cdx6wj5"]
+
+[ext_resource type="PackedScene" uid="uid://bfc0r15dmprmf" path="res://addons/kaykit_restaurant_bits/Assets/gltf/stove_multi_decorated.gltf" id="1_vso0c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_my47w"]
+size = Vector3(2.06877, 1, 2.19436)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qbbld"]
+height = 0.168114
+radius = 0.477551
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p8iyl"]
+height = 0.695214
+
+[node name="stove" type="Node3D"]
+
+[node name="stove_multi_decorated" parent="." instance=ExtResource("1_vso0c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21341, 0, 1.68854)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stove_multi_decorated"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stove_multi_decorated/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.587272, 0.0339627)
+shape = SubResource("BoxShape3D_my47w")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="stove_multi_decorated/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.492801, 1.36007, 0.540016)
+shape = SubResource("CylinderShape3D_qbbld")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="stove_multi_decorated/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.501487, 1.36007, -0.505875)
+shape = SubResource("CylinderShape3D_p8iyl")

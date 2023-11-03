@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf4v7uh6qsxkn"]
+
+[ext_resource type="Script" path="res://button-title-play.gd" id="1_adh5l"]
+
+[sub_resource type="SystemFont" id="SystemFont_pr5nl"]
+font_italic = true
+font_weight = 450
+font_stretch = 200
+
+[sub_resource type="FontVariation" id="FontVariation_wpgja"]
+
+[sub_resource type="FontVariation" id="FontVariation_ko3oi"]
+base_font = SubResource("FontVariation_wpgja")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.286275, 0.286275, 0.8, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 1155.0
+offset_bottom = 325.0
+theme_override_colors/font_color = Color(0.219608, 0.921569, 0.431373, 0.572549)
+theme_override_colors/font_shadow_color = Color(0.329412, 0.27451, 0.203922, 1)
+theme_override_colors/font_outline_color = Color(0.529412, 0.301961, 0.27451, 0.792157)
+theme_override_constants/shadow_offset_x = 15
+theme_override_constants/shadow_offset_y = 35
+theme_override_constants/outline_size = 50
+theme_override_constants/shadow_outline_size = 35
+theme_override_constants/line_spacing = 160
+theme_override_fonts/font = SubResource("SystemFont_pr5nl")
+theme_override_font_sizes/font_size = 76
+text = "BIGDAVE'S BURGER RUN !!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="button-title-play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 365.0
+offset_right = 866.0
+offset_bottom = 530.0
+theme_override_colors/font_color = Color(0.803922, 0.87451, 0.694118, 1)
+theme_override_colors/icon_pressed_color = Color(0.835294, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ko3oi")
+theme_override_font_sizes/font_size = 106
+text = "PLAY"
+script = ExtResource("1_adh5l")
+
+[connection signal="pressed" from="button-title-play" to="button-title-play" method="_on_pressed"]
