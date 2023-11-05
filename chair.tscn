@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyo25ub23eugy"]
+
+[ext_resource type="PackedScene" uid="uid://cl7of118xv510" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/chair_A.gltf" id="1_ibhji"]
+[ext_resource type="ArrayMesh" uid="uid://dc78lyf6c63tr" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/chair_A.obj" id="2_s4pia"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ylmx"]
+size = Vector3(0.650586, 0.499173, 0.663139)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_70ko2"]
+size = Vector3(0.687311, 1, 0.189141)
+
+[node name="chair" type="StaticBody3D"]
+
+[node name="chair_A" parent="." instance=ExtResource("1_ibhji")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00556028, -0.164621, -0.296116)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.253466, 0)
+shape = SubResource("BoxShape3D_0ylmx")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.986932, 0.161139, 0, -0.161139, 0.986932, 0, 0.700293, -0.250463)
+shape = SubResource("BoxShape3D_70ko2")
+
+[node name="ChairA" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00619853, 0.016473, -0.00212222)
+mesh = ExtResource("2_s4pia")

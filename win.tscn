@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhm2nqj4xxkhd"]
+
+[sub_resource type="GDScript" id="GDScript_j5fl0"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	Input.mouse_mode = 3
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _on_pressed():
+	get_tree().change_scene_to_file(\"res://MENU.tscn\") #grabs my scene from starting menu 
+
+"
+
+[sub_resource type="FontVariation" id="FontVariation_jdm14"]
+
+[node name="win" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_j5fl0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.2, 1, 1, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_right = 1163.0
+offset_bottom = 321.0
+theme_override_colors/font_color = Color(0.572549, 0, 0.533333, 1)
+theme_override_colors/font_shadow_color = Color(0.301961, 0.117647, 0.278431, 1)
+theme_override_colors/font_outline_color = Color(0.411765, 0.172549, 0.301961, 1)
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 10
+theme_override_constants/line_spacing = -165
+theme_override_fonts/font = SubResource("FontVariation_jdm14")
+theme_override_font_sizes/font_size = 221
+text = "YOU WIN"
+horizontal_alignment = 1
+vertical_alignment = 1

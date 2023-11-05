@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dncfs2darypnk"]
+
+[ext_resource type="ArrayMesh" uid="uid://bfyoqmudwuwau" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/food_stew.obj" id="1_k5m6b"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mgbxc"]
+height = 0.363058
+radius = 0.48839
+
+[node name="enemy_6" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.144566, 0.0127536, -0.372207)
+
+[node name="FoodStew" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.148236, 0, 0.389248)
+mesh = ExtResource("1_k5m6b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.145478, 0.177492, 0.391673)
+shape = SubResource("CylinderShape3D_mgbxc")

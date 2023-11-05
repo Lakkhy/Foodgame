@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dvopt1hy2t4ii"
+path="res://.godot/imported/ketchup.obj-8b81d8630d9ac46f023eddd5633e71cc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ketchup.obj-8b81d8630d9ac46f023eddd5633e71cc.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/ketchup.obj"
+dest_files=["res://.godot/imported/ketchup.obj-8b81d8630d9ac46f023eddd5633e71cc.mesh", "res://.godot/imported/ketchup.obj-8b81d8630d9ac46f023eddd5633e71cc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

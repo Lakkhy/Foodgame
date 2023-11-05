@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bmqvdslouko8v"
+path="res://.godot/imported/food_ingredient_onion.obj-77b701fc8c3db987c7b0c0dbb431c726.mesh"
+
+[deps]
+
+files=["res://.godot/imported/food_ingredient_onion.obj-77b701fc8c3db987c7b0c0dbb431c726.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/food_ingredient_onion.obj"
+dest_files=["res://.godot/imported/food_ingredient_onion.obj-77b701fc8c3db987c7b0c0dbb431c726.mesh", "res://.godot/imported/food_ingredient_onion.obj-77b701fc8c3db987c7b0c0dbb431c726.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

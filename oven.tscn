@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://crjp87vqf7uy6"]
+
+[ext_resource type="PackedScene" uid="uid://canolj53vqke0" path="res://addons/kaykit_restaurant_bits/Assets/gltf/oven.gltf" id="1_2xdwn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e65qx"]
+size = Vector3(2.0406, 1.99289, 1.9975)
+
+[node name="oven" type="Node3D"]
+
+[node name="oven" parent="." instance=ExtResource("1_2xdwn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0840255, 2.38419e-07, -0.0395038)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="oven"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="oven/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002078, 0.973517, -0.0414701)
+shape = SubResource("BoxShape3D_e65qx")

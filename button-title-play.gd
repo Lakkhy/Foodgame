@@ -13,4 +13,4 @@ func _process(delta):
 
 func _on_pressed():
 	pass # Replace with function body.
-	get_tree().change_scene_to_file("res://level_1.tscn")
+	get_tree().change_scene_to_file("res://level_1.tscn") #grabs my scene from starting menu 

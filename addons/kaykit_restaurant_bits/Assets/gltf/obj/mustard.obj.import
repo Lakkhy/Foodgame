@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ccdhpw5sx5ute"
+path="res://.godot/imported/mustard.obj-86607b63f00c09a5e58599f8f2776fc5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mustard.obj-86607b63f00c09a5e58599f8f2776fc5.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/mustard.obj"
+dest_files=["res://.godot/imported/mustard.obj-86607b63f00c09a5e58599f8f2776fc5.mesh", "res://.godot/imported/mustard.obj-86607b63f00c09a5e58599f8f2776fc5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

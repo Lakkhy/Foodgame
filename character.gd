@@ -40,3 +40,26 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+
+
+func _on_enemy_1_body_entered(body):
+	Input.mouse_mode = 3
+	get_tree().change_scene_to_file("res://gameover.tscn")
+
+
+
+func _on_enemy_2_body_entered(body):
+	Input.mouse_mode = 3
+	get_tree().change_scene_to_file("res://gameover.tscn")
+
+
+
+
+func _on_enemy_3_body_entered(body):
+	Input.mouse_mode = 3
+	get_tree().change_scene_to_file("res://gameover.tscn")
+	
+	
+	
+	

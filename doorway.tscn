@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://vlt1epixcok2"]
 
-[ext_resource type="ArrayMesh" uid="uid://bywwkn07lvmc0" path="res://addons/kaykit_restaurant_bits/Assets/obj/wall_doorway.obj" id="1_xhey5"]
+[ext_resource type="ArrayMesh" uid="uid://bywwkn07lvmc0" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/wall_doorway.obj" id="1_xhey5"]
 [ext_resource type="PackedScene" uid="uid://r8p0qfja6l4w" path="res://addons/kaykit_restaurant_bits/Assets/gltf/door_B.gltf" id="2_32q1q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uutvg"]

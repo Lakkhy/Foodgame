@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://tu24u48gqst4"]
+
+[ext_resource type="Script" path="res://sauce.gd" id="1_e6qbd"]
+[ext_resource type="ArrayMesh" uid="uid://dvopt1hy2t4ii" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/ketchup.obj" id="2_sr6st"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_icysx"]
+radius = 0.203661
+height = 1.04125
+
+[node name="sauce" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0393059)
+script = ExtResource("1_e6qbd")
+
+[node name="Ketchup" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011667, 0, 0.0528662)
+mesh = ExtResource("2_sr6st")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.241433, 0.050915)
+shape = SubResource("CapsuleShape3D_icysx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.315
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

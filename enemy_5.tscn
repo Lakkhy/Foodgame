@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm058bvnfukbd"]
+
+[ext_resource type="ArrayMesh" uid="uid://bmqvdslouko8v" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/food_ingredient_onion.obj" id="1_k6kwa"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pr8nc"]
+radius = 0.432551
+
+[node name="enemy_5" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.230856, 0, -0.284131)
+
+[node name="FoodIngredientOnion" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.233527, 0, 0.377308)
+mesh = ExtResource("1_k6kwa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23221, 0.137202, 0.380619)
+shape = SubResource("SphereShape3D_pr8nc")

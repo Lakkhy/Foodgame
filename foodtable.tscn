@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://e5i1860qj3fu"]
+
+[ext_resource type="ArrayMesh" uid="uid://7i5cwym7rdle" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/kitchentable_A_large_decorated.obj" id="1_f6v4y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d76xh"]
+size = Vector3(3.00333, 0.98572, 2.00089)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_m5kdw"]
+height = 0.702483
+radius = 0.285576
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vxq0a"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4ri1a"]
+
+[node name="foodtable" type="Node3D"]
+
+[node name="KitchentableALargeDecorated" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107651, 0, 0.131637)
+mesh = ExtResource("1_f6v4y")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="KitchentableALargeDecorated"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchentableALargeDecorated/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.512571, 0)
+shape = SubResource("BoxShape3D_d76xh")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="KitchentableALargeDecorated/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.750717, 1.26254, -0.57926)
+shape = SubResource("CylinderShape3D_m5kdw")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="KitchentableALargeDecorated/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1315, 1.20078, -0.0424364)
+shape = SubResource("CylinderShape3D_m5kdw")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="KitchentableALargeDecorated/StaticBody3D"]
+transform = Transform3D(-2.82298e-08, -0.645822, -0.0735821, 0.65, -2.84124e-08, 0, -3.21638e-09, -0.0735821, 0.645822, 0.692, 1.184, 0.555829)
+shape = SubResource("CapsuleShape3D_vxq0a")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="KitchentableALargeDecorated/StaticBody3D"]
+transform = Transform3D(-5.77299e-08, -1.32071, -0.150475, 1.32925, -5.81034e-08, 8.08317e-16, -6.57749e-09, -0.150475, 1.32071, -0.697892, 1.184, -0.451413)
+shape = SubResource("SphereShape3D_4ri1a")

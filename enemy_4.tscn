@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://db0yso8j01emr"]
+
+[ext_resource type="ArrayMesh" uid="uid://doureodeksbyo" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/food_ingredient_cheese.obj" id="1_htdox"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yu6oj"]
+size = Vector3(0.683921, 0.343106, 0.268568)
+
+[node name="enemy_4" type="Area3D"]
+
+[node name="FoodIngredientCheese" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2325, 0, 0.236108)
+mesh = ExtResource("1_htdox")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.943558, 0, -0.331206, 0, 1, 0, 0.331206, 0, 0.943558, 0.33239, 0.315291, 0.10807)
+shape = SubResource("BoxShape3D_yu6oj")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.934683, 0, 0.355482, 0, 1, 0, -0.355482, 0, 0.934683, 0.352947, 0.315291, 0.340008)
+shape = SubResource("BoxShape3D_yu6oj")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.0135434, 0, -0.999909, 0, 1, 0, 0.999909, 0, -0.0135434, 0.0429567, 0.315291, 0.230718)
+shape = SubResource("BoxShape3D_yu6oj")

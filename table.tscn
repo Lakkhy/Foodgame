@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://wwp1u87h3eo5"]
+
+[ext_resource type="PackedScene" uid="uid://cvfxuhjb2cdqg" path="res://addons/kaykit_restaurant_bits/Assets/gltf/table_round_A.gltf" id="1_qb7hm"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5a42m"]
+height = 0.189812
+radius = 1.50565
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kybxa"]
+height = 0.0998111
+radius = 0.803223
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_icg2k"]
+height = 1.02408
+radius = 0.108069
+
+[node name="table" type="Node3D"]
+
+[node name="table_round_A" parent="." instance=ExtResource("1_qb7hm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013605, 0, -0.178366)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="table_round_A"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_round_A/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.915266, 0)
+shape = SubResource("CylinderShape3D_5a42m")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="table_round_A/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0267678, 0)
+shape = SubResource("CylinderShape3D_kybxa")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="table_round_A/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.401346, 0)
+shape = SubResource("CylinderShape3D_icg2k")

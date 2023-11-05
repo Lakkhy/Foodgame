@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://d26tdjaag6dpv"]
+
+[ext_resource type="ArrayMesh" uid="uid://dt505t3c2wmii" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/kitchencounter_straight_decorated.obj" id="1_6k0un"]
+[ext_resource type="ArrayMesh" uid="uid://cee8k3jt7yer" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/kitchencounter_straight_A_decorated.obj" id="2_dl5ox"]
+[ext_resource type="ArrayMesh" uid="uid://b6xw0t5871few" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/kitchencounter_straight_B_backsplash.obj" id="3_il00v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6n754"]
+size = Vector3(5.95071, 0.930084, 1.74801)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0q2uu"]
+size = Vector3(1.36061, 0.0520349, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pai1l"]
+size = Vector3(1.18184, 1.6305, 1)
+
+[node name="counter" type="Node3D"]
+
+[node name="KitchencounterStraightDecorated" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.809524, 0, 0.0200934)
+mesh = ExtResource("1_6k0un")
+
+[node name="KitchencounterStraightADecorated" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13582, 0, 0.0135799)
+mesh = ExtResource("2_dl5ox")
+
+[node name="KitchencounterStraightBBacksplash" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16438, 0, 0.0346987)
+mesh = ExtResource("3_il00v")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11857, 0.542017, 0.110591)
+shape = SubResource("BoxShape3D_6n754")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.812339, 1.17294, 0.34048)
+shape = SubResource("BoxShape3D_0q2uu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/CollisionShape3D2"]
+transform = Transform3D(0.275637, 0, 0.961262, 0, 1, 0, -0.961262, 0, 0.275637, 4.3076, 2.38419e-07, -0.410605)
+shape = SubResource("BoxShape3D_pai1l")

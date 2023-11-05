@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cyjwi47d1s0tu"
+path="res://.godot/imported/oven_door.obj-c77448aaf751607142adb699b107bbce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/oven_door.obj-c77448aaf751607142adb699b107bbce.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/oven_door.obj"
+dest_files=["res://.godot/imported/oven_door.obj-c77448aaf751607142adb699b107bbce.mesh", "res://.godot/imported/oven_door.obj-c77448aaf751607142adb699b107bbce.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

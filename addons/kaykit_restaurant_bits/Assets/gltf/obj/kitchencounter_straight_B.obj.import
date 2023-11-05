@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://1xyvxqdm54ka"
+path="res://.godot/imported/kitchencounter_straight_B.obj-6a570f2761c761cf0ba33b55ec83a87f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/kitchencounter_straight_B.obj-6a570f2761c761cf0ba33b55ec83a87f.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/kitchencounter_straight_B.obj"
+dest_files=["res://.godot/imported/kitchencounter_straight_B.obj-6a570f2761c761cf0ba33b55ec83a87f.mesh", "res://.godot/imported/kitchencounter_straight_B.obj-6a570f2761c761cf0ba33b55ec83a87f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

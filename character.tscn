@@ -9,7 +9,7 @@ height = 1.3634
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_c477u"]
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="dave" type="CharacterBody3D"]
 script = ExtResource("1_l4b48")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

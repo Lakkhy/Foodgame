@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://cawmu1hgn8qtv"]
+
+[ext_resource type="Script" path="res://button-title-play.gd" id="1_cta2r"]
+[ext_resource type="Script" path="res://gameover.gd" id="1_wfgr5"]
+
+[sub_resource type="SystemFont" id="SystemFont_pr5nl"]
+font_italic = true
+font_weight = 450
+font_stretch = 200
+
+[sub_resource type="FontVariation" id="FontVariation_wpgja"]
+
+[sub_resource type="FontVariation" id="FontVariation_ko3oi"]
+base_font = SubResource("FontVariation_wpgja")
+
+[node name="gameover" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_wfgr5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.662745, 0.141176, 0.286275, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 1155.0
+offset_bottom = 325.0
+theme_override_colors/font_color = Color(0.639216, 0.0313726, 0.0431373, 1)
+theme_override_colors/font_shadow_color = Color(0.34902, 0.34902, 0.34902, 0.666667)
+theme_override_colors/font_outline_color = Color(0.486275, 0.760784, 0.160784, 1)
+theme_override_constants/shadow_offset_x = 15
+theme_override_constants/shadow_offset_y = 35
+theme_override_constants/outline_size = 50
+theme_override_constants/shadow_outline_size = 35
+theme_override_constants/line_spacing = 160
+theme_override_fonts/font = SubResource("SystemFont_pr5nl")
+theme_override_font_sizes/font_size = 76
+text = "game over :("
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="button-title-playagain" type="Button" parent="."]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 365.0
+offset_right = 866.0
+offset_bottom = 530.0
+theme_override_colors/font_color = Color(0.803922, 0.87451, 0.694118, 1)
+theme_override_colors/icon_pressed_color = Color(0.835294, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_ko3oi")
+theme_override_font_sizes/font_size = 106
+text = "PLAY AGAIN
+"
+script = ExtResource("1_cta2r")
+
+[connection signal="pressed" from="button-title-playagain" to="button-title-playagain" method="_on_pressed" flags=18]

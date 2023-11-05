@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc3rjbuevh1xi"]
+
+[ext_resource type="ArrayMesh" uid="uid://6ywc2o6dw317" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/food_ingredient_tomato.obj" id="1_mlbe8"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_56kat"]
+radius = 0.378716
+
+[node name="enemy_2" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.252713, 0.108255, -0.39074)
+
+[node name="FoodIngredientTomato" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.287944, 0, 0.40572)
+mesh = ExtResource("1_mlbe8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.287944, 0.26327, 0.40572)
+shape = SubResource("SphereShape3D_56kat")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu5m20pm0vcf8"]
+
+[ext_resource type="ArrayMesh" uid="uid://bof8jpm34x7l" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/food_ingredient_carrot.obj" id="1_w8su6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gf0ql"]
+radius = 0.257493
+height = 1.44729
+
+[node name="enemy_3" type="Area3D"]
+
+[node name="FoodIngredientCarrot" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0103163, 0.586019, -0.557828)
+mesh = ExtResource("1_w8su6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0152249, 0.665931, -0.593766)
+shape = SubResource("CapsuleShape3D_gf0ql")

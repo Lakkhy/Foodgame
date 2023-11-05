@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://xoi40w4qjkx"]
+
+[ext_resource type="PackedScene" uid="uid://dsou1cns0y081" path="res://addons/kaykit_restaurant_bits/Assets/gltf/food_ingredient_steak.gltf" id="1_msoq0"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_v6ppl"]
+height = 0.149032
+radius = 0.437909
+
+[node name="enemy_1" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0711454, 0, -0.159224)
+
+[node name="food_ingredient_steak" parent="." instance=ExtResource("1_msoq0")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.122695, 0.535218, 0.113687)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0.0305264, 0.531224, 0.123654)
+shape = SubResource("CylinderShape3D_v6ppl")

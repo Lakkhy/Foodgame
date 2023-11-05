@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dij4c3r30wjls"
+path="res://.godot/imported/pillar_B.obj-0a293e876a85f9b2e1944c633d622bf0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pillar_B.obj-0a293e876a85f9b2e1944c633d622bf0.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/pillar_B.obj"
+dest_files=["res://.godot/imported/pillar_B.obj-0a293e876a85f9b2e1944c633d622bf0.mesh", "res://.godot/imported/pillar_B.obj-0a293e876a85f9b2e1944c633d622bf0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

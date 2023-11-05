@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dob0yj3bxwcc8"]
 
-[ext_resource type="ArrayMesh" uid="uid://sdadu855gisc" path="res://addons/kaykit_restaurant_bits/Assets/obj/floor_kitchen.obj" id="1_8lwc8"]
+[ext_resource type="ArrayMesh" uid="uid://sdadu855gisc" path="res://addons/kaykit_restaurant_bits/Assets/gltf/obj/floor_kitchen.obj" id="1_8lwc8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7dd3h"]
 size = Vector3(7.81379, 0.586078, 8.1047)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0b2mxucjkwht"]
+
+[ext_resource type="PackedScene" uid="uid://du27f7j8a2ik5" path="res://addons/kaykit_restaurant_bits/Assets/gltf/kitchencounter_sink.gltf" id="1_t1rqy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tc52f"]
+size = Vector3(2.01311, 1, 1.89487)
+
+[node name="sink" type="Node3D"]
+
+[node name="kitchencounter_sink" parent="." instance=ExtResource("1_t1rqy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0120956, 0, 0.140252)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="kitchencounter_sink"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kitchencounter_sink/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.513115, -0.0443956)
+shape = SubResource("BoxShape3D_tc52f")
