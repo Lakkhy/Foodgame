@@ -75,6 +75,21 @@ _data = {
 "enemy_1an": SubResource("Animation_8mkky")
 }
 
+[sub_resource type="Animation" id="Animation_c7wp7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0931058, 0.171583, 23.7689)]
+}
+
 [sub_resource type="Animation" id="Animation_akus2"]
 resource_name = "new_animation"
 length = 5.0
@@ -92,7 +107,13 @@ tracks/0/keys = {
 "values": [Vector3(-0.0931058, 0.171583, 23.7689), Vector3(9.20887, 0.171583, 25.9775), Vector3(-0.0931058, 0.171583, 23.7689)]
 }
 
-[sub_resource type="Animation" id="Animation_c7wp7"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xuxd4"]
+_data = {
+"RESET": SubResource("Animation_c7wp7"),
+"new_animation": SubResource("Animation_akus2")
+}
+
+[sub_resource type="Animation" id="Animation_lnmlc"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -104,13 +125,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.0931058, 0.171583, 23.7689)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xuxd4"]
-_data = {
-"RESET": SubResource("Animation_c7wp7"),
-"new_animation": SubResource("Animation_akus2")
+"values": [Vector3(-7.92922, -0.0793597, 203.463)]
 }
 
 [sub_resource type="Animation" id="Animation_m540n"]
@@ -130,8 +145,15 @@ tracks/0/keys = {
 "values": [Vector3(-7.92922, -0.0793597, 203.463), Vector3(1.13331, -0.0793597, 203.463), Vector3(1.48208, -0.0793597, 199.054), Vector3(-6.76282, -0.0793597, 197.49)]
 }
 
-[sub_resource type="Animation" id="Animation_lnmlc"]
-length = 0.001
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jxnhu"]
+_data = {
+"RESET": SubResource("Animation_lnmlc"),
+"new_animation": SubResource("Animation_m540n")
+}
+
+[sub_resource type="Animation" id="Animation_81y2s"]
+length = 5.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -139,16 +161,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.7, 2.8, 4.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-7.92922, -0.0793597, 203.463)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_jxnhu"]
-_data = {
-"RESET": SubResource("Animation_lnmlc"),
-"new_animation": SubResource("Animation_m540n")
+"values": [Vector3(1.78345, -0.0793597, 198.755), Vector3(-5.37093, -0.0793597, 198.273), Vector3(-6.24634, -0.0793597, 195.361), Vector3(1.40742, -0.0793597, 195.632)]
 }
 
 [sub_resource type="Animation" id="Animation_lkvqa"]
@@ -168,9 +184,14 @@ tracks/0/keys = {
 "values": [Vector3(1.78345, -0.0793597, 198.755), Vector3(1.86764, -0.0793597, 203.417), Vector3(-5.2421, -0.0793597, 202.579), Vector3(-6.76143, -0.0793587, 197.001)]
 }
 
-[sub_resource type="Animation" id="Animation_81y2s"]
-length = 5.0
-loop_mode = 1
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h1fy0"]
+_data = {
+"RESET": SubResource("Animation_81y2s"),
+"new_animation": SubResource("Animation_lkvqa")
+}
+
+[sub_resource type="Animation" id="Animation_mo4un"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -178,16 +199,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.7, 2.8, 4.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(1.78345, -0.0793597, 198.755), Vector3(-5.37093, -0.0793597, 198.273), Vector3(-6.24634, -0.0793597, 195.361), Vector3(1.40742, -0.0793597, 195.632)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_h1fy0"]
-_data = {
-"RESET": SubResource("Animation_81y2s"),
-"new_animation": SubResource("Animation_lkvqa")
+"values": [Vector3(-6.96559, -0.0793597, 206.83)]
 }
 
 [sub_resource type="Animation" id="Animation_fp3dj"]
@@ -207,57 +222,84 @@ tracks/0/keys = {
 "values": [Vector3(2.91617, -0.0793597, 206.914), Vector3(-7.3643, -0.0793597, 206.438)]
 }
 
-[sub_resource type="Animation" id="Animation_mo4un"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-6.96559, -0.0793597, 206.83)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6cet2"]
 _data = {
 "RESET": SubResource("Animation_mo4un"),
 "new_animation": SubResource("Animation_fp3dj")
 }
 
+[sub_resource type="Animation" id="Animation_st2hi"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1.96192, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.105209, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(217.999, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
 [sub_resource type="Animation" id="Animation_6156w"]
 resource_name = "new_animation"
 length = 4.0
 loop_mode = 1
-tracks/0/type = "value"
+tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath(".:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2.3, 3.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-2.16249, -0.105208, 218.86), Vector3(-0.309606, -0.105208, 220.5), Vector3(-3.49899, -0.105208, 221.849), Vector3(-3.46355, -0.105208, 220.428)]
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-1.96192, -0.25, 0, 0.25, 0, 0.0966868, -0.25, 0, 0.25, 0, -1.87088, -0.25, 0, 0.25, 0, -3.72711, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2, 2.4, 3.7)
 }
-
-[sub_resource type="Animation" id="Animation_st2hi"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-2.16249, -0.105208, 218.86)]
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-0.105209, -0.25, 0, 0.25, 0, -0.10521, -0.25, 0, 0.25, 0, -0.10521, -0.25, 0, 0.25, 0, -0.105211, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2, 2.4, 3.7)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(217.999, -0.25, 0, 0.25, 0, 220.021, -0.25, 0, 0.25, 0, 222.547, -0.25, 0, 0.25, 0, 220.534, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2, 2.4, 3.7)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8kxpg"]
@@ -416,32 +458,29 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.712
 [node name="Node3D" parent="rooms/room3" instance=ExtResource("4_6v8dr")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10.6238, -0.165611, 75.0866)
 
-[node name="table" parent="rooms/room3" instance=ExtResource("17_8m5pe")]
-transform = Transform3D(1.305, 0, 0, 0, 1.305, 0, 0, 0, 1.305, 4.59819, -0.12495, 44.9955)
+[node name="wall7" parent="rooms/room3" instance=ExtResource("3_a7kcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97982, -0.759841, 41.2556)
 
-[node name="table2" parent="rooms/room3" instance=ExtResource("17_8m5pe")]
-transform = Transform3D(1.305, 0, 0, 0, 1.305, 0, 0, 0, 1.305, 8.29067, -0.12495, 48.6621)
+[node name="wall8" parent="rooms/room3" instance=ExtResource("3_a7kcf")]
+transform = Transform3D(-0.00293211, 0, 0.999996, 0, 1, 0, -0.999996, 0, -0.00293211, 13.9577, -0.759841, 51.6582)
 
-[node name="table3" parent="rooms/room3" instance=ExtResource("17_8m5pe")]
-transform = Transform3D(1.305, 0, 0, 0, 1.305, 0, 0, 0, 1.305, 6.98411, -0.12495, 53.921)
+[node name="wall9" parent="rooms/room3" instance=ExtResource("3_a7kcf")]
+transform = Transform3D(-0.779513, 0, 0.626386, 0, 1, 0, -0.626386, 0, -0.779513, 16.7333, -0.759841, 64.5774)
 
-[node name="table4" parent="rooms/room3" instance=ExtResource("17_8m5pe")]
-transform = Transform3D(1.305, 0, 0, 0, 1.305, 0, 0, 0, 1.305, 12.858, -0.12495, 54.4559)
+[node name="wall10" parent="rooms/room3" instance=ExtResource("3_a7kcf")]
+transform = Transform3D(-0.881468, 0, -0.472243, 0, 1, 0, 0.472243, 0, -0.881468, 12.4089, -0.759841, 63.9812)
 
-[node name="table5" parent="rooms/room3" instance=ExtResource("17_8m5pe")]
-transform = Transform3D(1.305, 0, 0, 0, 1.305, 0, 0, 0, 1.305, 17.1888, -0.12495, 57.4132)
+[node name="wall11" parent="rooms/room3" instance=ExtResource("3_a7kcf")]
+transform = Transform3D(0.774172, 0, -0.632976, 0, 1, 0, 0.632976, 0, 0.774172, 13.6365, -0.759841, 52.9764)
 
-[node name="table6" parent="rooms/room3" instance=ExtResource("17_8m5pe")]
-transform = Transform3D(1.305, 0, 0, 0, 1.305, 0, 0, 0, 1.305, 19.0904, -0.12495, 61.7618)
+[node name="wall12" parent="rooms/room3" instance=ExtResource("3_a7kcf")]
+transform = Transform3D(0.999998, 0, 0.00197231, 0, 1, 0, -0.00197231, 0, 0.999998, 3.91508, -0.759841, 58.6772)
 
-[node name="table7" parent="rooms/room3" instance=ExtResource("17_8m5pe")]
-transform = Transform3D(1.305, 0, 0, 0, 1.305, 0, 0, 0, 1.305, 14.8268, -0.12495, 66.135)
+[node name="wall13" parent="rooms/room3" instance=ExtResource("3_a7kcf")]
+transform = Transform3D(0.999998, 0, 0.00197231, 0, 1, 0, -0.00197231, 0, 0.999998, 12.1957, -0.759841, 61.8225)
 
-[node name="table8" parent="rooms/room3" instance=ExtResource("17_8m5pe")]
-transform = Transform3D(1.305, 0, 0, 0, 1.305, 0, 0, 0, 1.305, 9.96193, -0.12495, 67.169)
-
-[node name="table9" parent="rooms/room3" instance=ExtResource("17_8m5pe")]
-transform = Transform3D(1.305, 0, 0, 0, 1.305, 0, 0, 0, 1.305, 9.84298, -0.124952, 73.5608)
+[node name="wall14" parent="rooms/room3" instance=ExtResource("3_a7kcf")]
+transform = Transform3D(0.0248683, 0, 0.999691, 0, 1, 0, -0.999691, 0, 0.0248683, 9.67508, -0.759841, 75.4522)
 
 [node name="room7" type="Node3D" parent="rooms"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3179, 0.0447192, 118.191)
@@ -844,9 +883,10 @@ libraries = {
 }
 
 [node name="enemy_6" parent="enemies" instance=ExtResource("12_ndjcq")]
-transform = Transform3D(0.892389, 0, -0.451267, 0, 1, 0, 0.451267, 0, 0.892389, -2.16249, -0.105208, 218.86)
+transform = Transform3D(-0.999713, 0, -0.0239611, 0, 1, 0, 0.0239611, 0, -0.999713, -1.96192, -0.105209, 217.999)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="enemies/enemy_6"]
+autoplay = "new_animation"
 libraries = {
 "": SubResource("AnimationLibrary_8kxpg")
 }
@@ -1123,6 +1163,15 @@ transform = Transform3D(0.0310095, 0, -0.999519, 0, 1, 0, 0.999519, 0, 0.0310095
 
 [node name="oven4" parent="." instance=ExtResource("7_qn0ll")]
 transform = Transform3D(0.0310095, 0, -0.999519, 0, 1, 0, 0.999519, 0, 0.0310095, 16.0378, 1.7816, 98.7846)
+
+[node name="table" parent="." instance=ExtResource("17_8m5pe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.91932, -0.0793601, 34.5289)
+
+[node name="plate" parent="." instance=ExtResource("6_6abor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.85143, 0.930812, 33.637)
+
+[node name="chair" parent="." instance=ExtResource("13_jk7ay")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.78835, -0.0793601, 32.4834)
 
 [connection signal="body_entered" from="saus/sauce" to="saus/sauce" method="_on_body_entered"]
 [connection signal="collected" from="saus/sauce" to="Control/Label/counter" method="_on_sauce_collected"]

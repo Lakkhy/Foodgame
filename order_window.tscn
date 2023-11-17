@@ -1,9 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cjs4bs42fr13k"]
+[gd_scene load_steps=5 format=3 uid="uid://cjs4bs42fr13k"]
 
-[ext_resource type="PackedScene" uid="uid://dnwrcs0wcvhbg" path="res://addons/kaykit_restaurant_bits/Assets/gltf/wall_orderwindow_decorated.gltf" id="1_krvu2"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_c0x8n"]
-size = Vector3(0.167926, 0.84855, 0.481165)
+[ext_resource type="PackedScene" uid="uid://b31in15ta1upr" path="res://addons/kaykit_restaurant_bits/Assets/gltf/wall_orderwindow.gltf" id="1_41xn1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2cxyy"]
 size = Vector3(3.94306, 1.13532, 0.508408)
@@ -14,20 +11,12 @@ size = Vector3(0.708352, 3.61384, 0.421597)
 [sub_resource type="BoxShape3D" id="BoxShape3D_nbe6r"]
 size = Vector3(2.95343, 0.152786, 0.828567)
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_gjfto"]
-height = 0.704903
-radius = 0.123694
-
 [node name="order window" type="Node3D"]
 
-[node name="wall_orderwindow_decorated" parent="." instance=ExtResource("1_krvu2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73195, -0.0453703, -0.184644)
+[node name="wall_orderwindow" parent="." instance=ExtResource("1_41xn1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7476, -0.0375707, -0.212352)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(0.723642, 0, 0.690175, 0, 1, 0, -0.690175, 0, 0.723642, 2.71963, 1.53086, -0.185994)
-shape = SubResource("BoxShape3D_c0x8n")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7383, 0.565768, -0.184682)
@@ -48,11 +37,3 @@ shape = SubResource("BoxShape3D_8vdmc")
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74728, 1.0663, -0.133855)
 shape = SubResource("BoxShape3D_nbe6r")
-
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58354, 1.54904, -0.0323248)
-shape = SubResource("CylinderShape3D_gjfto")
-
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.579945, 1.54904, -0.272187)
-shape = SubResource("CylinderShape3D_gjfto")
